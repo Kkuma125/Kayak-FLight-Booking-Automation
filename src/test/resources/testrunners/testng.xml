@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Kayak_Flight_Booking_Test_Automtion_Regression_Suite" thread-count="2" parallel="tests" verbose="2">
+
+    <listeners>
+        <listener
+                class-name="com.qa.kayak.testlisteners.ExtentReportListener"/>
+        <listener
+                class-name="com.qa.kayak.testlisteners.TestAllureListener"/>
+    </listeners>
+
+    <!--    <test name="FlightsPage Test_Firefox">-->
+    <!--        <parameter name="browser" value="Firefox"/>-->
+    <!--        <parameter name="version" value="121"/>-->s
+    <!--        <classes>-->
+    <!--            <class name="com.qa.kayak.tests.FlightsPageTest"/>-->
+    <!--        </classes>-->
+    <!--    </test>-->
+
+    <test name="Flights_Page_Test_Chrome">
+        <parameter name="Browser" value="Chrome"/>
+        <parameter name="version" value="122"/>
+        <classes>
+            <class name="com.qa.kayak.tests.FlightsPageTest"/>
+        </classes>
+    </test>
+
+    <!--    <test name="SearchResults Test_Chrome">-->
+    <!--        <parameter name="browser" value="Chrome"/>-->
+    <!--        <parameter name="version" value="120"/>-->
+    <!--        <classes>-->
+    <!--            <class name="com.qa.kayak.tests.SearchResultsTest"/>-->
+    <!--        </classes>-->
+    <!--    </test>-->
+
+    <!--    <test name="SearchResults Test_Firefox">-->
+    <!--        <parameter name="browser" value="firefox"/>-->
+    <!--        <parameter name="version" value="121"/>-->
+    <!--        <classes>-->
+    <!--            <class name="com.qa.kayak.tests.SearchResultsTest"/>-->
+    <!--        </classes>-->
+
+    <!--    </test>-->
+
+</suite>
