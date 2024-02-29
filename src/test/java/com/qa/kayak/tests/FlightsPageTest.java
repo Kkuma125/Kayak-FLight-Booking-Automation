@@ -44,6 +44,12 @@ public class FlightsPageTest extends BaseTest {
 
     }
 
+    @Test
+    public void selectDateTest() {
+        flightsPage.selectDate("29", "April", "2024");
+
+    }
+
 }
 
 
