@@ -18,6 +18,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.time.Duration;
 import java.util.Properties;
 
 /**
@@ -73,7 +74,6 @@ public class DriverFactory {
             System.out.println("Please pass the correct browser name : "+browserName);
             LOGGER.info("Please pass the correct browser name : \" + browserName");
         }
-
         getDriver().manage().window().maximize();
         getDriver().manage().deleteAllCookies();
 

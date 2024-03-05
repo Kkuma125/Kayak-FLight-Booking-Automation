@@ -16,7 +16,7 @@ public class FlightsPage {
 
     private final By fromCLick = By.xpath("(//div[@class='vvTc-item-close'])[1]");
     private final By from = By.xpath(" //input[@placeholder='From?']");
-    private final By fromtext = By.xpath("//div[@role='listitem']/parent::div");
+    private final By fromtext = By.xpath("(//div[@role='list'])[1]");
     private final By To = By.xpath(" //input[@placeholder='To?']");
     private final By Totext = By.xpath("(//div[@role='list'])[2]");
     private final By startdate = By.xpath("//span[@aria-label='Start date calendar input']");
@@ -49,6 +49,7 @@ public class FlightsPage {
         ele.sendKeys(Keys.ENTER);
         return;
     }
+
     public String getFromText() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOfElementLocated(fromtext));
@@ -70,7 +71,7 @@ public class FlightsPage {
 
     public String getToText() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(Totext));
+        wait.until(ExpectedConditions.presenceOfElementLocated(Totext));
         WebElement toEle = driver.findElement(Totext);
         String text = toEle.getText();
         System.out.println(text);
