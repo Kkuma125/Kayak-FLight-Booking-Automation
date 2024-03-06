@@ -23,9 +23,7 @@ public class FlightsPage {
     private final By monthyearValue = By.xpath("(//div[@class='wHSr-monthName'])[1]");
     private final By nextButton = By.xpath("(//*[local-name()='span' and @class='tUEz-icon'])[2]");
     private final By backButton = By.xpath("(//*[local-name()='span' and @class='tUEz-icon'])[1]");
-
-    private final By monthyearValueText = By.xpath("(//div[@class='wHSr-monthName'])[1]");
-    //private final By selectdate = By.xpath("(//div[text()='15'])[1]");
+    private final By searchbutton = By.xpath("//button[@aria-label='Search']");
 
 
     public FlightsPage(WebDriver driver) {
@@ -116,6 +114,10 @@ public class FlightsPage {
         }
 
 
+    }
+
+    public void clickSearchButton() {
+        driver.findElement(searchbutton).click();
     }
 
 }

@@ -50,6 +50,10 @@ public class FlightsPageTest extends BaseTest {
 
     }
 
+    @Test
+    public void clickSearchButtonTest() {
+        flightsPage.clickSearchButton();
+    }
 }
 
 
